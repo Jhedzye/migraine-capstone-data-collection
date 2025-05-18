@@ -1,12 +1,12 @@
 # Capstone Data Collection – Step 2: Collect Your Data
 
-## Overview
+##  Overview
 
 This notebook explores two publicly available datasets relevant to operations and efficiency work at Fastenal, aligning with my role in operations development. The analysis focuses on user behavior in e-commerce and shipment logistics to simulate real-world decision-making scenarios around delivery timing and user activity.
 
 ---
 
-## Datasets Explored
+##  Datasets Explored
 
 ### 1. Worker Productivity Dataset
 - **Filename:** `worker_productivity_data.csv`
@@ -49,3 +49,4 @@ These datasets simulate key decision-making areas in supply chain and operations
 ##  Notes
 - All data is public and sourced from Kaggle.
 - This work is part of the UMass Global Data Analytics Capstone project – Step 2: Data Collection.
+
