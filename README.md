@@ -1,52 +1,39 @@
-# Capstone Data Collection – Step 2: Collect Your Data
+# Capstone Project – Step 2: Data Collection  
+Machine Learning Engineering Bootcamp  
+UMass Global | Jhedzye
 
-##  Overview
+## Overview
 
-This notebook explores two publicly available datasets relevant to operations and efficiency work at Fastenal, aligning with my role in operations development. The analysis focuses on user behavior in e-commerce and shipment logistics to simulate real-world decision-making scenarios around delivery timing and user activity.
+This repository contains the datasets, code, and documentation for Step 2 of the Capstone project. The goal was to collect and explore relevant datasets for a machine learning use case focused on operations efficiency and decision-making. Two datasets were selected based on relevance to supply chain and productivity analysis.
 
----
-
-##  Datasets Explored
+## Datasets Explored
 
 ### 1. Worker Productivity Dataset
-- **Filename:** `worker_productivity_data.csv`
-- **Source:** [Kaggle - Ecommerce Behavior Data from Multi-Category Store](https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store)
-- **Description:** Captures user behavior on an e-commerce platform including view, cart, and purchase actions.
-- **Rows Used:** 1,099 (manually trimmed for performance)
-- **What I Did:**
-  - Parsed `event_time` column as datetime.
-  - Visualized user activity per day.
-  - Calculated session gaps using `diff()` by `user_id`.
-  - Identified top 10 most active users.
+- Source: Kaggle - Multi-category E-commerce Behavior  
+  https://www.kaggle.com/datasets/mkechinov/ecommerce-behavior-data-from-multi-category-store
+- Original Size: Over 8 million rows (~8GB uncompressed)
+- Current Size Used: 1,099 rows (subset for exploration)
+- Purpose: Used to simulate worker productivity by analyzing user activity sequences, session timing, and top performers based on event frequency.
+- File: `worker_productivity_data.csv`
 
----
+### 2. Shipment and Delivery Dataset
+- Source: Kaggle - Customer Analytics (Train.csv)  
+  https://www.kaggle.com/datasets/prachi13/customer-analytics
+- Size: 10,999 records
+- Purpose: Used to explore delivery delay patterns based on shipment method, weight, discount, and customer interaction.
+- File: `Train.csv`
 
-### 2. Supply Chain Shipment Data
-- **Filename:** `Train.csv`
-- **Source:** [Kaggle - Late Deliveries (Customer Analytics)](https://www.kaggle.com/datasets/prachi13/customer-analytics)
-- **Description:** Shipment records with info on delivery mode, customer ratings, product cost, and delivery outcomes.
-- **What I Did:**
-  - Explored how weight, cost, and discount affect delivery delays.
-  - Created a correlation heatmap of numerical fields.
-  - Grouped by `Delivered_On_Time` and calculated means to uncover trends.
+## Data Collection Process
 
----
+Both datasets were collected from Kaggle using publicly available sources. The e-commerce dataset was downloaded in full and then trimmed to a focused subset for performance and clarity during initial exploration. The shipment dataset was used as-is. The code for data loading, cleaning, and exploration is included in the notebook.
 
-## Why These Datasets?
-These datasets simulate key decision-making areas in supply chain and operations:
-- How customer behavior patterns relate to session productivity and conversion.
-- How logistics metrics (e.g., cost, weight, and discounts) correlate with fulfillment performance.
+## Files in This Repository
 
----
+- `Mini_Project-4.ipynb`: Jupyter Notebook with data loading, cleaning, visualizations, and summary insights.
+- `worker_productivity_data.csv`: Trimmed sample of large e-commerce user behavior dataset.
+- `Train.csv`: Shipment and logistics dataset with delivery performance features.
+- `README.md`: Project documentation and dataset details.
 
-##  Files in This Repository
-- `Mini_Project.ipynb`: Jupyter Notebook with full code, visuals, and markdown documentation.
-- `worker_productivity_data.csv`: Trimmed behavioral dataset for productivity exploration.
-- `Train.csv`: Shipment dataset used for logistics and delivery delay analysis.
+## Summary
 
----
-
-##  Notes
-- All data is public and sourced from Kaggle.
-- This work is part of the UMass Global Data Analytics Capstone project – Step 2: Data Collection.
-
+The datasets chosen are relevant to business operations, fulfillment efficiency, and behavioral analysis. This step demonstrates the ability to collect large datasets, trim and explore them, and prepare for further modeling and analysis in later steps of the capstone project.
